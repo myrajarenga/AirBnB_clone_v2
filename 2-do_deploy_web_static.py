@@ -6,12 +6,15 @@ import os.path
 env.hosts = ['54.236.44.93', '100.26.122.135']
 env.key_filename = '~/.ssh/school'
 env.user = 'ubuntu'
+
+
 def do_deploy(archive_path):
     """Generate the .tgz archive from the contents of web_static folder"""
     if not os.path.isfile(archive_path):
         return False
+
     # Get the name of the compressed file and remove the file extension
-    compresedfile= archive_path.split("/")[-1]
+    compresedfile = archive_path.split("/")[-1]
     no_extension = compresedfile.split(".")[0]
 
     try:
