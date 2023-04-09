@@ -42,7 +42,7 @@ file { '/data/web_static/releases/test/index.html':
   owner  => 'ubuntu',
   group  => 'ubuntu',
   mode   => '0644',
-  content => '<html><body>Hello World</body></html>',
+  content => '<html><body>Holberton School</body></html>',
 }
 
 # Create symbolic link
