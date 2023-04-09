@@ -3,6 +3,8 @@
 """
 from fabric.api import local
 from datetime import datetime
+
+
 def do_pack():
     """Compressing the contents of web_static folder"""
     time = datetime.now().strftime("%Y%m%d%H%M%S")
