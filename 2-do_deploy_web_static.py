@@ -24,7 +24,7 @@ def do_deploy(archive_path):
 
         """ Create the directory for the release and extract the compressed\
                 file into it"""
-        run("sudo mkdir -p {}".format(remote_path))
+        run("sudo mkdir -p {}".format(path))
         run("sudo tar -xvzf /tmp/{} -C {}".format(
             compresedfile, path))
 
