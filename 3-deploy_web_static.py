@@ -33,7 +33,7 @@ def do_deploy(archive_path):
 
     # Get the name of the compressed file and remove the file extension
     compresedfile = archive_path.split("/")[-1]
-    no_extension = compressed_file.split(".")[0]
+    no_extension = compresedfile.split(".")[0]
 
     try:
         # Define the remote path and symlink to be used for deployment
@@ -45,7 +45,7 @@ def do_deploy(archive_path):
 
         """ Create the directory for the release and extract the compressed\
                 file into it"""
-        run("sudo mkdir -p {}".format(remote_path))
+        run("sudo mkdir -p {}".format(path))
         run("sudo tar -xvzf /tmp/{} -C {}".format(
             compresedfile, path))
 
