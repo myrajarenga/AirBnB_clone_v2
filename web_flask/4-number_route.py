@@ -29,7 +29,6 @@ def pytfon_is_cool(text='is cool'):
     return 'Python' + text.replace("_", " ")
 
 
-
 @app.route("/number/<int:n>", strict_slashes=False)
 def a_number(n):
     """display only a number passed on url"""
