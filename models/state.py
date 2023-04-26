@@ -1,9 +1,11 @@
 #!/usr/bin/python3
 """ State Module for HBNB project """
 from models.base_model import BaseModel, Base
-from sqlalchemy import Column, String
+from sqlalchemy import Column, String, Datetime, ForeignKeyg
 from sqlalchemy.orm import relationship
 from os import getenv
+from models.city import City
+from models import storage
 
 
 class State(BaseModel, Base):
@@ -17,7 +19,9 @@ class State(BaseModel, Base):
         def cities(self):
             """getter attribute that returns the list of city instances\
                     with state_id equals to the current State.id"""
+            values_city = storage.all(City).values()
             city_list = []
+
             for city in models.storage.all("city").values():
                 if city.state_id == State.id:
                     city_list.append(city)
