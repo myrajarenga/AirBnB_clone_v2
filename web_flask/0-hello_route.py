@@ -6,8 +6,8 @@ app = Flask(__name__)
 
 @app.route("/", strict_slashes=False)
 def hello_HBNB():
-    "function to return hello HBNB"
-    return 'Hello HBNB'
+    """function to return hello HBNB"""
+    return 'Hello HBNB!'
 
 
 if __name__ == "__main__":
