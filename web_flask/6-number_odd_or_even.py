@@ -6,7 +6,7 @@ app = Flask(__name__)
 
 @app.route("/", strict_slashes=False)
 def index():
-    "function to return hello HBNB"
+    """function to return hello HBNB"""
     return 'Hello HBNB!'
 
 
@@ -26,7 +26,7 @@ def index_c(text):
 @app.route('/python/<text>', strict_slashes=False)
 def pytfon_is_cool(text='is cool'):
     """return 'python' followed by the text variable value set to it"""
-    return 'Python' + text.replace("_", " ")
+    return 'Python ' + text.replace("_", " ")
 
 
 @app.route("/number/<int:n>", strict_slashes=False)
